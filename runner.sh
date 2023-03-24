@@ -32,6 +32,7 @@
 #     exit 1
 # fi
 
+
 # Start Elasticsearch
 echo "Starting Elasticsearch"
 ../elasticsearch-7.9.2/bin/elasticsearch &

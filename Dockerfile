@@ -28,12 +28,11 @@ RUN chmod -R 777 elasticsearch-7.9.2
 
 RUN apt-get update && apt-get install -y netcat
 RUN apt install curl
-# RUN chown -R daemon:daemon elasticsearch-7.9.2
+RUN pip install python-dotenv
+
 
 WORKDIR /app
-
 COPY . /app
-# COPY MRTP.pdf /app/Documents
 RUN mkdir /Documents
 RUN chmod +x runner.sh
 

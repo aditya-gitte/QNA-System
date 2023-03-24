@@ -4,6 +4,7 @@ from werkzeug.utils import secure_filename
 import urllib.request
 import os
 import json
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
@@ -77,6 +78,7 @@ def processAnswersWithPdf():
 
 
 if __name__=="__main__":
+    load_dotenv()
     host = os.environ.get('FLASK_RUN_HOST')
     port = int(os.environ.get('FLASK_RUN_PORT'))
     app.run(host=host, port=port)
