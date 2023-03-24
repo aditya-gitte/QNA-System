@@ -35,7 +35,7 @@
 
 # Start Elasticsearch
 echo "Starting Elasticsearch"
-./elasticsearch-7.9.2/bin/elasticsearch &
+../elasticsearch-7.9.2/bin/elasticsearch &
 
 # Wait for Elasticsearch to start up (fixed wait time of 10 seconds)
 echo "Waiting for Elasticsearch to start up"

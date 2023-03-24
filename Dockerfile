@@ -33,7 +33,7 @@ RUN pip install python-dotenv
 
 WORKDIR /app
 COPY . /app
-RUN mkdir /Documents
+RUN mkdir /app/Documents
 RUN chmod +x runner.sh
 
 
