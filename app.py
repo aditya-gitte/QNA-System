@@ -26,8 +26,8 @@ def processAnswersWithoutPdf():
     else:
         return "Invalid request method"
     filename='MRTP.pdf'
-    pdfpath=os.path.join(UPLOAD_FOLDER, filename)
-    resp=qna_converter(question,pdfpath)
+    
+    resp=qna_converter(question,filename)
     return resp
 
 

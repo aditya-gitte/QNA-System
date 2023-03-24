@@ -31,16 +31,14 @@ RUN apt install curl
 # RUN chown -R daemon:daemon elasticsearch-7.9.2
 
 WORKDIR /app
+
 COPY . /app
+# COPY MRTP.pdf /app/Documents
 RUN mkdir /Documents
-COPY MRTP.pdf /Documents/
 RUN chmod +x runner.sh
 
 
-
-
-
-
+#elastic search cannot be run as the root user
 RUN useradd -ms /bin/bash nonrootuser
 USER nonrootuser
 
