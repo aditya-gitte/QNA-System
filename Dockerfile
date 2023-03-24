@@ -34,9 +34,9 @@ RUN apt-get update && apt-get install -y netcat
 RUN apt install curl
 # RUN chown -R daemon:daemon elasticsearch-7.9.2
 
-RUN mkdir /app
+WORKDIR /app
 COPY . /app
-RUN chmod +x app/runner.sh
+RUN chmod +x runner.sh
 # RUN chmod +x /elasticsearch-7.9.2/jdk/bin/java
 
 
@@ -47,5 +47,5 @@ USER nonrootuser
 
 
 
-CMD ["./app/runner.sh"]
+CMD ["./runner.sh"]
 

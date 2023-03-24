@@ -46,17 +46,17 @@ def qna_converter(question,pdf):
   prediction = pipe.run(query=question, params={"Retriever": {"top_k": 10}, "Reader": {"top_k": 3}})
 
   #debugging
-  answer = print_answers(prediction, details="all")
+  # answer = print_answers(prediction, details="all")
 
 
-  json_answer=json.dumps(answer, default=str)
+  # json_answer=json.dumps(answer, default=str)
   return prediction
 
 
 #testing
-print("starting python script")
+# print("starting python script")
 # time.sleep(50)
-ans=qna_converter('When can the State Government revise a Regional Plan after it comes into operation?','app/The Maharashtra Regional And Town Planning Act (MRTP).pdf')
+# ans=qna_converter('When can the State Government revise a Regional Plan after it comes into operation?','app/The Maharashtra Regional And Town Planning Act (MRTP).pdf')
 # ans2=json.dumps(ans, default=str)
 # # print(ans2 )
 # with open(f"Output.json", "w") as f:
