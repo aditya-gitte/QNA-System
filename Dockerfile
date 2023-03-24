@@ -6,6 +6,7 @@ RUN pip install --upgrade pip
 RUN pip install Flask
 RUN pip install --upgrade pip setuptools wheel
 
+
 #fixing shap
 RUN apt-get update && \
     apt-get install -y gcc g++ make cmake
@@ -14,11 +15,6 @@ RUN pip install shap
 
 RUN pip install farm-haystack[ocr]
 RUN yes | apt-get install poppler-utils
-
-
-# Create a new group and user
-# RUN groupadd -r elasticsearch && useradd -r -g elasticsearch elasticsearch
-
 
 
 # Install, update permissions and run Elasticsearch
@@ -36,8 +32,11 @@ RUN apt install curl
 
 WORKDIR /app
 COPY . /app
+RUN mkdir /Documents
+COPY MRTP.pdf /Documents/
 RUN chmod +x runner.sh
-# RUN chmod +x /elasticsearch-7.9.2/jdk/bin/java
+
+
 
 
 

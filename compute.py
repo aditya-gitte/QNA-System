@@ -47,9 +47,8 @@ def qna_converter(question,pdf):
 
   #debugging
   # answer = print_answers(prediction, details="all")
-
-
   # json_answer=json.dumps(answer, default=str)
+  
   return prediction
 
 
