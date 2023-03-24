@@ -22,7 +22,10 @@ def processAnswersWithoutPdf():
     
     resp=qna_converter(question,'MRTP.pdf')
     return resp
-    
+
+
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0", port=6000)
+    host = os.environ.get('FLASK_RUN_HOST')
+    port = int(os.environ.get('FLASK_RUN_PORT'))
+    app.run(host=host, port=port)
