@@ -4,11 +4,13 @@ from haystack.document_stores import ElasticsearchDocumentStore
 from haystack.document_stores import ElasticsearchDocumentStore
 from haystack.nodes import TextConverter, PDFToTextConverter, DocxToTextConverter, PreProcessor
 from haystack.utils import fetch_archive_from_http
-from haystack.nodes import ElasticsearchRetriever, TfidfRetriever
+# from haystack.nodes import ElasticsearchRetriever 
+from haystack.nodes import TfidfRetriever
 from haystack.nodes import FARMReader, TransformersReader
 from haystack.pipelines import ExtractiveQAPipeline
 from haystack.utils import print_answers
 import json
+
 
 def qna_converter(question,pdf):
   host = os.environ.get("ELASTICSEARCH_HOST", "localhost")

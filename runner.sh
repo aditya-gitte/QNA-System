@@ -39,8 +39,8 @@ echo "Starting Elasticsearch"
 
 # Wait for Elasticsearch to start up (fixed wait time of 10 seconds)
 echo "Waiting for Elasticsearch to start up"
-sleep 300
+sleep 160
 
 # Run Python script
 echo "Starting flask server"
-python3 app.py
+python3 app.py 

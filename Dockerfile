@@ -5,6 +5,7 @@ FROM --platform=linux/x86_64 python:3.9-slim-buster
 RUN pip install --upgrade pip
 RUN pip install Flask
 RUN pip install --upgrade pip setuptools wheel
+RUN pip install Flask-Cors==3.0.10 
 
 
 #fixing shap
