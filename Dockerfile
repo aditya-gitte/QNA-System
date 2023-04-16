@@ -6,6 +6,7 @@ RUN pip install --upgrade pip
 RUN pip install Flask
 RUN pip install --upgrade pip setuptools wheel
 RUN pip install Flask-Cors==3.0.10 
+RUN pip install gdown
 
 
 #fixing shap
